@@ -52,7 +52,7 @@ async function generateWeatherPix(weather_description){
         .then(res => res.json())
         .then( data => {
             if(data.total > 0){
-                document.getElementById('weather_img').src = data.hits[0].webformatURL
+                document.getElementById('weather_img').src = data.hits[0].webformatURL;
             }
         })
 }
