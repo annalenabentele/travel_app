@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Weather Journal</title>
+<link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
+</head>
+ <body>
+<div id = "app">
+  <div class ="holder headline">
+    Travel App
+  </div>
+  <div class ="holder zip">
+    <label for="place">Enter your travel destination here</label>
+    <input type="text" id="place" placeholder="enter destination here">
+  </div>
+  <div class ="holder feel">
+    <label for="date">When will the trip be?</label>
+    <input class= "myInput" type="date" id="travelDate" placeholder="Enter the date here"></input>
+    <button id="generate" type = "submit"> Generate </button>
+  </div>
+  <div class ="holder entry">
+    <div class = "title">Your Travel</div>
+    <div id = "entryHolder">
+      <div id="destination"></div>
+      <img src="" id="destination_img">
+      <div id = "date"></div> 
+      <div id = "temp"></div>
+      <img src="" id="weather_img">
+    </div>
+  </div>
+  </div>
+
+  <script>
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js');
+        });
+    }
+  </script>
+</body>
+</html>
